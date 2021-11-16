@@ -4,14 +4,16 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of GiniDecompLY is to ...
+The goal of GiniDecompLY is to use the approach of Lerman and Yitzhaki (1985) to decompose the Gini Index by income sources.
+
+The package provides a set of functions that quantify the effect of each income source on inequalities.
 
 ## Installation
 
-You can install the released version of GiniDecompLY from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of GiniDecompLY from GitHub with:
 
 ``` r
-install.packages("GiniDecompLY")
+devtools::install_github("A-A-Mbarek/GiniDecompLY")
 ```
 
 ## Example
