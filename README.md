@@ -16,12 +16,10 @@ You can install the released version of GiniDecompLY from GitHub with:
 devtools::install_github("A-A-Mbarek/GiniDecompLY")
 ```
 
-## Example
 
-This is a basic example which shows you how to solve a common problem:
 
-``` r
-library(GiniDecompLY)
-## basic example code
-```
+## Reference
+
+Yitzhaki S., Lerman R. (1985) Income Inequality Effects by Income Source: A New Approach and Applications to the United States. *The Review of Economics and Statistics , Feb., 1985, Vol. 67, No. 1 (Feb., 1985),
+pp. 151-156*
 
