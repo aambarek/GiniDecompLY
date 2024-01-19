@@ -5,6 +5,7 @@
 #' @param ord a numeric vector containing the distribution to sort with.
 #' @param weights an optional vector of weights of x to be used in the computation of the Gini coefficient. Should be NULL or a numeric vector.
 #' @return The value of the Gini index.
+#' @noRd
 #'
 
 gini_wtd_ord <- function (x, ord = NULL, weights = NULL)

@@ -2,7 +2,7 @@
 % Please edit documentation in R/gini_correlation.R
 \name{gini_corr}
 \alias{gini_corr}
-\title{Gini correlation}
+\title{Gini correlation index}
 \usage{
 gini_corr(x, y, weights = NULL)
 }
@@ -18,4 +18,22 @@ The value of the Gini correlation, should be between -1 and 1.
 }
 \description{
 This function calculates the Gini correlation between two distributions.
+}
+\examples{
+
+# Calculate the gini correlation between the salary and total income distributions
+
+
+Salary_distribution = sample_income_data$wage
+Total_income_distribution = rowSums(sample_income_data[3:6])
+
+gini_corr(Salary_distribution, Total_income_distribution)
+
+
+}
+\references{
+E. Schechtman and S. Yitzhaki (1999) \emph{On the proper bounds of the Gini correlation},
+Economics Letters,Volume 63, Issue 2, p. 133-138, ISSN 0165-1765
+
+Handcock, M. (2016), \emph{Relative Distribution Methods in the Social Sciences}, Springer-Verlag, Inc., New York, 1999 ISBN 0387987789
 }

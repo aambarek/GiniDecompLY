@@ -16,8 +16,25 @@ gini_income_elasticity(.data, ..., .by = NULL, .wgt = NULL)
 \item{.wgt}{an optional vector of weights to apply in computation. Should be NULL or a numeric vector.}
 }
 \value{
-A tibble containing the value of elasticity and the marginal effect of each source on income inequality.
+An object of class \code{data.frame} containing all the calculated indicators. The data.frame is grouped by the columns passed into \code{.by} argument.
 }
 \description{
 This function computes the elasticity of Gini index associated with a percentage change in the mean income (for each income source).
+It provides a set of indicators :
+\itemize{
+\item \code{income_source}: Column indicating each income source passed into the function call.
+\item \code{Share}: Column indicating the share of the income source to the total income.
+\item \code{Gini}: Column showing the Gini index for each income source.
+\item \code{Gini_corr}: Column showing the Gini correlation between the income source and the total income.
+\item \code{Elasticity}: Column indicating the elasticity of Gini index associated with a percentage change in the mean income source.
+\item \code{Marginal_Impact}: Column indicating the marginal impact a change in the mean income source on the overall Gini index.
+}
+}
+\examples{
+
+sample_income_data \%>\%
+  gini_income_elasticity(wage, self_employment_rev, farming_rev, other_rev,
+  .by = region)
+
+gini_income_elasticity(sample_income_data, 3:6, .by = region, .wgt = sample_wgt)
 }

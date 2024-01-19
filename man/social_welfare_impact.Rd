@@ -16,8 +16,28 @@ social_welfare_impact(.data, ..., .by = NULL, .wgt = NULL)
 \item{.wgt}{an optional vector of weights to apply in computation. Should be NULL or a numeric vector.}
 }
 \value{
-A tibble containing growth effect, redistribution effect, and overall effect of each income source.
+An object of class \code{data.frame} containing all the calculated indicators. The data.frame is grouped by the columns passed into \code{.by} argument.
 }
 \description{
-This function provides a Growth-redistribution decomposition of effects (for each income source) on social welfare function defined by Amartya Sen (1970).
+This function provides a Growth-redistribution decomposition of effects (for each income source) on social welfare function defined by Amartya Sen (1970, ISBN:978-0-444-85127-7).
+}
+\details{
+It provides a set of indicators :
+\itemize{
+\item \code{income_source}: Column indicating each income source passed into the function call.
+\item \code{Share}: Column indicating the share of the income source to the total income.
+\item \code{Gini}: Column showing the Gini index for each income source.
+\item \code{Gini_corr}: Column showing the Gini correlation between the income source and the total income.
+\item \code{Growth_Effect}: Column indicating the effect of growth in the income source on the Social Welfare Function.
+\item \code{Redistribution_Effect}: Column indicating the effect of redistribution of the income source on the Social Welfare Function.
+\item \code{Total_Variation}: Column adding up both effects to calculate the overall effect of each income source on the Social Welfare Function.
+}
+}
+\examples{
+
+sample_income_data \%>\%
+  social_welfare_impact(wage, self_employment_rev, farming_rev, other_rev,
+  .wgt = sample_wgt)
+
+social_welfare_impact(sample_income_data, 3:6, .by = region, .wgt = sample_wgt)
 }

@@ -8,6 +8,8 @@
 #' @return A tibble containing three components (for each source) of income decomposition.
 #' @importFrom stats weighted.mean
 #' @importFrom tidyr pivot_longer
+#' @noRd
+#'
 
 
 
@@ -28,8 +30,8 @@ gini.source.decomp.comp <- function(.data, ..., .by = NULL, .wgt = NULL) {
 
 
   decomp_components <- sources %>%
-    pivot_longer(cols = - c(Total_Income, W, {{.by}}), names_to = "source_revenu", values_to = "valeur_revenu") %>%
-    dplyr::group_by(dplyr::across({{.by}}), source_revenu) %>%
+    pivot_longer(cols = - c(Total_Income, W, {{.by}}), names_to = "income_source", values_to = "valeur_revenu") %>%
+    dplyr::group_by(dplyr::across({{.by}}), income_source) %>%
     dplyr::summarise(Share = stats::weighted.mean(valeur_revenu, w = W) / weighted.mean(Total_Income, w = W),
               Gini = gini_wtd_ord(valeur_revenu, weights = W),
               Gini_corr = gini_corr(valeur_revenu, Total_Income, weights = W),

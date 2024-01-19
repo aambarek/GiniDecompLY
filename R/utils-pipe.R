@@ -8,4 +8,5 @@
 #' @export
 #' @importFrom magrittr %>%
 #' @usage lhs \%>\% rhs
+#' @returns The result of calling 'rhs(lhs)'.
 NULL

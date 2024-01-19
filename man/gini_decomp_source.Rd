@@ -16,8 +16,24 @@ gini_decomp_source(.data, ..., .by = NULL, .wgt = NULL)
 \item{.wgt}{an optional vector of weights to apply in computation. Should be NULL or a numeric vector.}
 }
 \value{
-A tibble containing contribution of each source to the income inequality.
+An object of class \code{data.frame} containing all the calculated indicators. The data.frame is grouped by the columns passed into \code{.by} argument.
 }
 \description{
-This function provides a decomposition of Gini index by income sources based on the approach of Lerman and Yitzhaki (1985).
+This function provides a decomposition of Gini index by income sources based on the approach of Lerman and Yitzhaki (1985) \url{doi:10.2307/1928447} .
+It provides a set of indicators :
+\itemize{
+\item \code{income_source}: Column indicating each income source passed into the function call.
+\item \code{Share}: Column indicating the share of the income source to the total income.
+\item \code{Gini}: Column showing the Gini index for each income source.
+\item \code{Gini_corr}: Column showing the Gini correlation between the income source and the total income.
+\item \code{Absolute_Contribution}: Column showing the  absolute contribution of each income source to the global Gini index.
+\item \code{Relative_Contribution}: Column indicating the relative contribution of each income source to the global Gini index.
+}
+}
+\examples{
+
+sample_income_data \%>\%
+  gini_decomp_source(wage, self_employment_rev, farming_rev, other_rev)
+
+gini_decomp_source(sample_income_data, 3:6, .by = region, .wgt = sample_wgt)
 }
