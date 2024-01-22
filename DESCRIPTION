@@ -1,8 +1,10 @@
 Package: GiniDecompLY
 Title: Gini Decomposition by Income Sources
 Version: 1.0.0
-Author: Abdessamad Ait Mbarek 
-Maintainer: Abdessamad Ait Mbarek <abdessamad.ambarek@gmail.com>
+Authors@R: c(person(given = "Abdessamad",
+                    family = "Ait Mbarek",
+                    role = c("aut", "cre"),
+                    email = "abdessamad.ambarek@gmail.com"))
 Description: Estimation of the effect of each income source on income inequalities based on the decomposition of Lerman and Yitzhaki (1985) <doi:10.2307/1928447>. 
 License: GPL-3
 Encoding: UTF-8
