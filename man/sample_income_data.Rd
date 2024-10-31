@@ -5,8 +5,6 @@
 \alias{sample_income_data}
 \title{Sample income data}
 \format{
-\subsection{}{
-
 A data frame with 200 rows and 6 columns:
 \describe{
 \item{region}{Whether the households residence is urban or rural}
@@ -16,7 +14,6 @@ A data frame with 200 rows and 6 columns:
 \item{farming_rev}{Income derived from agricultural activities}
 \item{other_rev}{Other income sources}
 ...
-}
 }
 }
 \usage{

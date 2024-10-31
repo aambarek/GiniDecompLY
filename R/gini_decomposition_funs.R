@@ -47,7 +47,7 @@ gini_decomp_source <- function(.data, ..., .by = NULL, .wgt = NULL) {
 #' - `Gini`: Column showing the Gini index for each income source.
 #' - `Gini_corr`: Column showing the Gini correlation between the income source and the total income.
 #' - `Elasticity`: Column indicating the elasticity of Gini index associated with a percentage change in the mean income source.
-#' - `Marginal_Impact`: Column indicating the marginal impact a change in the mean income source on the overall Gini index.
+#' - `Marginal_Impact`: Column indicating the marginal impact of a change in the mean income source on the overall Gini index.
 
 #' @param .data A data frame, or data frame extension (e.g. a tibble)
 #' @param ... One or more unquoted expressions separated by commas indicating income sources to consider in the decomposition. Variable names can be used as if they were positions in the data frame.

@@ -27,7 +27,7 @@ It provides a set of indicators :
 \item \code{Gini}: Column showing the Gini index for each income source.
 \item \code{Gini_corr}: Column showing the Gini correlation between the income source and the total income.
 \item \code{Elasticity}: Column indicating the elasticity of Gini index associated with a percentage change in the mean income source.
-\item \code{Marginal_Impact}: Column indicating the marginal impact a change in the mean income source on the overall Gini index.
+\item \code{Marginal_Impact}: Column indicating the marginal impact of a change in the mean income source on the overall Gini index.
 }
 }
 \examples{

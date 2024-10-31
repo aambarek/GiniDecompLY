@@ -1,2 +1,6 @@
 ^GiniDecompLY\.Rproj$
 ^\.Rproj\.user$
+^doc$
+^Meta$
+^CRAN-SUBMISSION$
+^cran-comments\.md$
