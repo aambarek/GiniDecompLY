@@ -4,6 +4,7 @@
 #'
 #'
 #' @format
+#'
 #' A data frame with 200 rows and 6 columns:
 #' \describe{
 #'   \item{region}{Whether the households residence is urban or rural}
