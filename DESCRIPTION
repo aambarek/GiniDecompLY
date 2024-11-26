@@ -11,8 +11,8 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
-URL: https://github.com/A-A-Mbarek/GiniDecompLY
-BugReports: https://github.com/A-A-Mbarek/GiniDecompLY/issues
+URL: https://github.com/aambarek/GiniDecompLY
+BugReports: https://github.com/aambarek/GiniDecompLY/issues
 Imports: 
     dplyr,
     tidyr,
